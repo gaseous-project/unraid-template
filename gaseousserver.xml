@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>Gaseous</Name>
+    <Repository>gaseousgames/gaseousserver:latest-embeddeddb</Repository>
+    <Registry>https://hub.docker.com/r/gaseousgames/gaseousserver</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/orgs/gaseous-project/discussions</Support>
+    <Project>https://github.com/gaseous-project/gaseous-server</Project>
+    <Overview>Gaseous is a game library manager, allowing you to organise your games (both retro and modern) into a single searchable library in your web browser.&#xD;
+&#xD;
+For retro platforms, a web based emulator has been included allowing you to play your games anywhere, anytime.&#xD;
+&#xD;
+Gaseous is heavily influenced by media managers such as Plex, Jellyfin, etc, and aims to present your games with as much metadata (such as descriptions, screenshots, cover art, etc) as possible.</Overview>
+    <Category>GameServers:</Category>
+    <WebUI>http://[IP]:[PORT:5198]</WebUI>
+    <TemplateURL/>
+    <Icon>https://github.com/gaseous-project/gaseous-server/blob/main/logo.png?raw=true</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DonateText>Support this project</DonateText>
+    <DonateLink>https://ko-fi.com/michaelgreen23528</DonateLink>
+    <Requires>You will need to create an IGDB API client id and key.&#xD;
+&#xD;
+Instructions to create these can be found at: https://github.com/gaseous-project/gaseous-server/wiki/Metadata</Requires>
+    <Config Name="IGDB Client ID" Target="igdbclientid" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+    <Config Name="IGDB Client Secret" Target="igdbclientsecret" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+    <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+    <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+    <Config Name="config" Target="/home/gaseous/.gaseous-server" Default="/mnt/user/appdata/gaseous/config" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/gaseous/config</Config>
+    <Config Name="database" Target="/var/lib/mysql" Default="/mnt/user/appdata/gaseous/database" Mode="rw" Description="" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/gaseous/database</Config>
+    <Config Name="Timezone" Target="TZ" Default="Australia/Sydney" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">Australia/Sydney</Config>
+    <Config Name="port" Target="80" Default="5198" Mode="tcp" Description="" Type="Port" Display="advanced" Required="false" Mask="false">5198</Config>
+    <Screenshot>https://github.com/gaseous-project/gaseous-server/blob/main/screenshots/Library.png?raw=true</Screenshot>
+    <Screenshot>https://github.com/gaseous-project/gaseous-server/blob/main/screenshots/Game.png?raw=true</Screenshot>
+    <Screenshot>https://github.com/gaseous-project/gaseous-server/blob/main/screenshots/Emulator.png?raw=true</Screenshot>
+</Container>
